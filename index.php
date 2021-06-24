@@ -17,11 +17,12 @@
         <div class="row border border-primary rounded p-3 m-4 text-secondary justify-content-center">
             <?php 
 
-            // setlocale(LC_TIME, "fr_FR");
-            // echo 'La date d\'aujourd\'hui en français est :  '. strftime("%A %e %B %g");
-            $jours = array('', 'Lundi', 'Mardi', 'Merccredi', 'Jeudi', 'Vendredi', 'Samedi','Dimanche');
-            $mois = array('', 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre');
-            echo 'La date d\'aujourd\'hui en français est :  '. $jours[date('N')]. '  '. date('d'). '  '. $mois[date('n')];
+            setlocale(LC_TIME, ['fr_FR.utf8']);
+            // problème de langue acceptée https://stackoverflow.com/questions/10909911/php-setlocale-has-no-effect
+            echo 'La date d\'aujourd\'hui en français est :  '. strftime("%A %e %B %g");
+            // $jours = array('', 'Lundi', 'Mardi', 'Merccredi', 'Jeudi', 'Vendredi', 'Samedi','Dimanche');
+            // $mois = array('', 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre');
+            // echo 'La date d\'aujourd\'hui en français est :  '. $jours[date('N')]. '  '. date('d'). '  '. $mois[date('n')];
             ?>
         </div>
     </div>
